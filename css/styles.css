@@ -22,6 +22,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
+    background-color: #fdfdfd;
 }
 
 .fixed {
@@ -40,7 +41,6 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: min-content;
 }
 .logo a {
     font-weight: bold;
@@ -86,7 +86,7 @@ body {
     display: none;
 }
 .nav-list:hover .nav-list-items {
-    animation: fade-out 1s;
+    animation: nav-list-animation 1s;
     display: block;
 }
 .nav-list-items li {
@@ -125,7 +125,7 @@ body {
     }
 }
 
-@keyframes fade-out {
+@keyframes nav-list-animation {
     0% {
         opacity: 0;
         transform: translateY(5px);
