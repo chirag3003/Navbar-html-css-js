@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-transform: inherit;
+    text-decoration: inherit;
+}
+
+li {
+    list-style: none;
+}
+button {
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+.fixed {
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    width: 100%;
+    padding: 10px 10%;
+    background-color: aliceblue;
+    position: relative;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: min-content;
+}
+.logo a {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.logo img {
+    max-height: 40px;
+    margin-right: 5px;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+.nav-item {
+    margin: 10px;
+    font-size: 1.2rem;
+}
+.nav-item a {
+    cursor: pointer;
+}
+.nav-list {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.nav-list-items {
+    z-index: 100;
+    position: absolute;
+    width: max-content;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 10px;
+    top: 100%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.nav-list:hover .nav-list-items {
+    animation: fade-out 1s;
+    display: block;
+}
+.nav-list-items li {
+    margin: 5px;
+}
+
+.toggle-button {
+    display: none;
+    height: 40px;
+}
+.toggle-button button {
+    height: 100%;
+    padding: 5px;
+}
+.toggle-button img {
+    max-height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .toggle-button {
+        display: block;
+    }
+    .nav-items {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        background-color: aliceblue;
+        align-items: baseline;
+        padding: 10px 10%;
+    }
+    .nav-items-active {
+        display: block;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
